@@ -34,10 +34,17 @@
   <body class="search-page">
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
- <script defer src="js/master.js"></script>
-
- <!-- End of navigation bar -->
-  
+    <!-- 6th March CHANGE: Added navbar fetch script -->
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("nav-placeholder").innerHTML = data;
+        })
+        .catch((error) => {
+          console.error("Error loading the navigation:", error);
+        });
+    </script>
     <div class="container container-sh">
       <h2 class="search-title">Search Havering Timeline</h2>
 
