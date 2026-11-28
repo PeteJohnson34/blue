@@ -25,16 +25,7 @@
   <body class="misc-page">
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
-    <script>
-      fetch("navbar-index.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("nav-placeholder").innerHTML = data;
-        })
-        .catch((error) => {
-          console.error("Error loading the navigation:", error);
-        });
-    </script>
+ <script defer src="js/master.js"></script>
 
     <!--End of Navigation bar-->
     <div class="misc-page">
