@@ -18,20 +18,7 @@
 <body class="misc-page">
   <!--Navigation bar-->
   <div id="nav-placeholder"></div>
-  <script>
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        const navbarBase = new URL('../', window.location.href);
-        document.querySelectorAll('#nav-placeholder a[href]').forEach(link => {
-          link.href = new URL(link.getAttribute('href'), navbarBase).href;
-        });
-      })
-      .catch(error => {
-        console.error('Error loading the navigation:', error);
-      });
-  </script>
+  <script defer src="../js/navbar.js"></script>
 
   <!--End of Navigation bar-->
   <div class="misc-page">
